@@ -4,12 +4,25 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <h1>Os cinco países com mais casos de COVID-19 registrados até o momento:</h1>
+  <h1 id="tittle">Os 10 países com mais casos de COVID-19 registrados até o momento:</h1>
   <body>
-    <div id="map_canvas">
+    <div id="content">
+      <div>
+       Gráfico
+      </div>
+      <div>
+        <canvas id="canvasGrafico"></canvas>
+      </div>
+    </div>
+    <div id="map_canvas">  
       <script id= "map_image" type=text/javascript
       src='https://maps.googleapis.com/maps/api/js?key(AQUI VAI A SUA API KEY)'> 
     </script> 
-    <script src="script.js"></script>
+    </div>  
+    <script src="script.js"></script></br>
+    <div id="contentTwo">
+      <h3>Subtítulo</h3>
+        <p>Texto Complementar</p>
+    </div>
   </body>
 </html>
