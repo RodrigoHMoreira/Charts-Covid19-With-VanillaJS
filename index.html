@@ -3,26 +3,62 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <h1 id="tittle">Os 10 países com mais casos de COVID-19 registrados até o momento:</h1>
   </head>
-  <h1 id="tittle">Os 10 países com mais casos de COVID-19 registrados até o momento:</h1>
   <body>
-    <div id="content">
-      <div>
-       Gráfico
-      </div>
-      <div>
-        <canvas id="canvasGrafico"></canvas>
-      </div>
-    </div>
     <div id="map_canvas">  
       <script id= "map_image" type=text/javascript
       src='https://maps.googleapis.com/maps/api/js?key(AQUI VAI A SUA API KEY)'> 
     </script> 
     </div>  
     <script src="script.js"></script></br>
-    <div id="contentTwo">
-      <h3>Subtítulo</h3>
-        <p>Texto Complementar</p>
-    </div>
+  </div>
+  <div id="contentTwo">
+    <h2>CASOS REGISTRADOS NAS ÚLTIMAS 24 HORAS:</h2>
+    <table id="table" border="1">
+      <tr>
+          <th id="countryZero"></th>
+          <th id="countryOne"></th>
+          <th id="countryTwo"></th>
+          <th id="countryThree"></th>
+          <th id="countryFour"></th>
+          <th id="countryFive"></th>
+          <th id="countrySix"></th>
+          <th id="countrySeven"></th>
+          <th id="countryEight"></th>
+          <th id="countryNine"></th>
+      </tr>
+      <tr>
+          <td id="todayCasesZero"></td>
+          <td id="todayCasesOne"></td>
+          <td id="todayCasesTwo"></td>
+          <td id="todayCasesThree"></td>
+          <td id="todayCasesFour"></td>
+          <td id="todayCasesFive"></td>
+          <td id="todayCasesSix"></td>
+          <td id="todayCasesSeven"></td>
+          <td id="todayCasesEight"></td>
+          <td id="todayCasesNine"></td>
+      </tr>
+      <tr>
+          <td id="todayDeathsZero"></td>
+          <td id="todayDeathsOne"></td>
+          <td id="todayDeathsTwo"></td>
+          <td id="todayDeathsThree"></td>
+          <td id="todayDeathsFour"></td>
+          <td id="todayDeathsFive"></td>
+          <td id="todayDeathsSix"></td>
+          <td id="todayDeathsSeven"></td>
+          <td id="todayDeathsEight"></td>
+          <td id="todayDeathsNine"></td>
+      </tr>
+    </table>
+  </div>
+    <div id="content">
+      <canvas id="graph_canvas">
+        <script id= "graph_image" type=text/javascript
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js">
+        </script>
+      <canvas>
   </body>
 </html>
