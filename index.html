@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="style.css">
-    <h1 id="tittle">Os 10 países com mais casos de COVID-19 registrados até o momento:</h1>
+    <h1>Os 10 países com mais casos de COVID-19 registrados até o momento</h1>
   </head>
   <body>
     <div id="map_canvas">  
@@ -14,9 +14,10 @@
     <script src="script.js"></script></br>
   </div>
   <div id="contentTwo">
-    <h2>CASOS REGISTRADOS NAS ÚLTIMAS 24 HORAS:</h2>
+    <h2>Casos registrados e número de mortes hoje</h2>
     <table id="table" border="1">
       <tr>
+          <th> </th>
           <th id="countryZero"></th>
           <th id="countryOne"></th>
           <th id="countryTwo"></th>
@@ -29,6 +30,7 @@
           <th id="countryNine"></th>
       </tr>
       <tr>
+          <td><strong>Casos</strong></td>  
           <td id="todayCasesZero"></td>
           <td id="todayCasesOne"></td>
           <td id="todayCasesTwo"></td>
@@ -41,6 +43,7 @@
           <td id="todayCasesNine"></td>
       </tr>
       <tr>
+          <td><strong>Mortes</strong></td> 
           <td id="todayDeathsZero"></td>
           <td id="todayDeathsOne"></td>
           <td id="todayDeathsTwo"></td>

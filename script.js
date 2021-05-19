@@ -8,6 +8,7 @@
      const response = await fetch(`https://corona.lmao.ninja/v3/covid-19/countries?yesterday=${day}%2F${month}%2F${year}&sort=cases&allowNull=0`)
      const data = await response.json();
      //Primeiro colocado do hanking
+     const countryZeroName = await data[0].country;
      const countryZero = await data[0].countryInfo.iso3;
      const latZero = await data[0].countryInfo.lat;
      const longZero = await data[0].countryInfo.long;
@@ -16,6 +17,7 @@
      const casesTodayZero = await data[0].todayCases;
      const deathsTodayZero = await data[0].todayDeaths;
      //Segundo colocado
+     const countryOneName = await data[1].country;
      const countryOne = await data[1].countryInfo.iso3;
      const latOne = await data[1].countryInfo.lat;
      const longOne = await data[1].countryInfo.long;
@@ -24,6 +26,7 @@
      const casesTodayOne = await data[1].todayCases;
      const deathsTodayOne = await data[1].todayDeaths;
      //Terceiro colocado
+     const countryTwoName = await data[2].country;
      const countryTwo = await data[2].countryInfo.iso3;
      const latTwo = await data[2].countryInfo.lat;
      const longTwo = await data[2].countryInfo.long;
@@ -32,6 +35,7 @@
      const casesTodayTwo = await data[2].todayCases;
      const deathsTodayTwo = await data[2].todayDeaths;
      //Quarto colocado
+     const countryThreeName = await data[3].country;
      const countryThree = await data[3].countryInfo.iso3;
      const latThree = await data[3].countryInfo.lat;
      const longThree = await data[3].countryInfo.long;
@@ -40,6 +44,7 @@
      const casesTodayThree = await data[3].todayCases;
      const deathsTodayThree = await data[3].todayDeaths;
      //Quinto colocado
+     const countryFourName = await data[4].country;
      const countryFour = await data[4].countryInfo.iso3;
      const latFour = await data[4].countryInfo.lat;
      const longFour = await data[4].countryInfo.long;
@@ -48,6 +53,7 @@
      const casesTodayFour = await data[4].todayCases;
      const deathsTodayFour = await data[4].todayDeaths;
      //Sexto colocado
+     const countryFiveName = await data[5].country;
      const countryFive = await data[5].countryInfo.iso3;
      const latFive = await data[5].countryInfo.lat;
      const longFive = await data[5].countryInfo.long;
@@ -56,6 +62,7 @@
      const casesTodayFive = await data[5].todayCases;
      const deathsTodayFive = await data[5].todayDeaths;
      //Sétimo colocado
+     const countrySixName = await data[6].country;
      const countrySix = await data[6].countryInfo.iso3;
      const latSix = await data[6].countryInfo.lat;
      const longSix = await data[6].countryInfo.long;
@@ -64,6 +71,7 @@
      const casesTodaySix = await data[6].todayCases;
      const deathsTodaySix = await data[6].todayDeaths;
     //Oitavo colocado
+    const countrySevenName = await data[7].country;
      const countrySeven = await data[7].countryInfo.iso3;
      const latSeven = await data[7].countryInfo.lat;
      const longSeven = await data[7].countryInfo.long;
@@ -72,6 +80,7 @@
      const casesTodaySeven = await data[7].todayCases;
      const deathsTodaySeven = await data[7].todayDeaths;
      //Nono colocado
+     const countryEightName = await data[8].country;
      const countryEight = await data[8].countryInfo.iso3;
      const latEight = await data[8].countryInfo.lat;
      const longEight = await data[8].countryInfo.long;
@@ -80,6 +89,7 @@
      const casesTodayEight = await data[8].todayCases;
      const deathsTodayEight = await data[8].todayDeaths;
      //Décimo colocado
+     const countryNineName = await data[9].country;
      const countryNine = await data[9].countryInfo.iso3;
      const latNine = await data[9].countryInfo.lat;
      const longNine = await data[9].countryInfo.long;
@@ -94,34 +104,34 @@
      //Marcação
      //Primeiro colocado do hanking
      var pointZero = new google.maps.LatLng(latZero,longZero);
-     var marker = new google.maps.Marker({position: pointZero,map: map,title:`Primeiro colocado com ${casesZero} casos registrados`});
+     var marker = new google.maps.Marker({position: pointZero,map: map,title:`${countryZeroName} em primeiro colocado com ${casesZero} casos registrados`});
      //Segundo colocado
      var pointOne = new google.maps.LatLng(latOne,longOne);
-     var marker = new google.maps.Marker({position: pointOne,map: map,title:`Segundo colocado com ${casesOne} casos registrados`});
+     var marker = new google.maps.Marker({position: pointOne,map: map,title:`${countryOneName} em segundo colocado com ${casesOne} casos registrados`});
      //Terceiro colocado
      var pointTwo = new google.maps.LatLng(latTwo,longTwo);
-     var marker = new google.maps.Marker({position: pointTwo,map: map,title:`Terceiro colocado com ${casesTwo} casos registrados`});
+     var marker = new google.maps.Marker({position: pointTwo,map: map,title:`${countryTwoName} em terceiro colocado com ${casesTwo} casos registrados`});
      //Quarto colocado
      var pointThree = new google.maps.LatLng(latThree,longThree);
-     var marker = new google.maps.Marker({position: pointThree,map: map,title:`Quarto colocado com ${casesThree} casos registrados`});
+     var marker = new google.maps.Marker({position: pointThree,map: map,title:`${countryThreeName} em quarto colocado com ${casesThree} casos registrados`});
      //Quinto colocado
      var pointFour = new google.maps.LatLng(latFour,longFour);
-     var marker = new google.maps.Marker({position: pointFour,map: map,title:`Quinto colocado com ${casesFour} casos registrados`});
+     var marker = new google.maps.Marker({position: pointFour,map: map,title:`${countryFourName} em quinto colocado com ${casesFour} casos registrados`});
      //Sexto colocado
      var pointFive = new google.maps.LatLng(latFive,longFive);
-     var marker = new google.maps.Marker({position: pointFive,map: map,title:`Sexto colocado com ${casesFive} casos registrados`});
+     var marker = new google.maps.Marker({position: pointFive,map: map,title:`${countryFiveName} em sexto colocado com ${casesFive} casos registrados`});
      //Sétimo colocado
      var pointSix = new google.maps.LatLng(latSix,longSix);
-     var marker = new google.maps.Marker({position: pointSix,map: map,title:`Sétimo colocado com ${casesSix} casos registrados`});
+     var marker = new google.maps.Marker({position: pointSix,map: map,title:`${countrySixName} em sétimo colocado com ${casesSix} casos registrados`});
      //Oitavo colocado
      var pointSeven = new google.maps.LatLng(latSeven,longSeven);
-     var marker = new google.maps.Marker({position: pointSeven,map: map,title:`Oitavio colocado com ${casesSeven} casos registrados`});
+     var marker = new google.maps.Marker({position: pointSeven,map: map,title:`${countrySevenName} em oitavio colocado com ${casesSeven} casos registrados`});
      //Nono colocado
      var pointEight = new google.maps.LatLng(latEight,longEight);
-     var marker = new google.maps.Marker({position: pointEight,map: map,title:`Nono colocado com ${casesEight} casos registrados`});
+     var marker = new google.maps.Marker({position: pointEight,map: map,title:`${countryEightName} em nono colocado com ${casesEight} casos registrados`});
      //Décimo colocado
      var pointNine = new google.maps.LatLng(latNine,longNine);
-     var marker = new google.maps.Marker({position: pointNine,map: map,title:`Décimo colocado com ${casesNine} casos registrados`});
+     var marker = new google.maps.Marker({position: pointNine,map: map,title:`${countryNineName} em décimo colocado com ${casesNine} casos registrados`});
      };
      getPosttwo();
      //Gráfico
@@ -155,34 +165,34 @@
     //Primeira linha
     //Primeiro país
     const tableCountryZero = document.getElementById('countryZero');
-    tableCountryZero.innerHTML = countryZero;
+    tableCountryZero.innerHTML = countryZeroName;
     //Segundo país
     const tableCountryOne = document.getElementById('countryOne');
-    tableCountryOne.innerHTML = countryOne;
+    tableCountryOne.innerHTML = countryOneName;
     //Terceiro país
     const tableCountryTwo = document.getElementById('countryTwo');
-    tableCountryTwo.innerHTML = countryTwo;
+    tableCountryTwo.innerHTML = countryTwoName;
     //Quarto país
     const tableCountryThree = document.getElementById('countryThree');
-    tableCountryThree.innerHTML = countryThree;
+    tableCountryThree.innerHTML = countryThreeName;
     //Quinto páis
     const tableCountryFour = document.getElementById('countryFour');
-    tableCountryFour.innerHTML = countryFour;
+    tableCountryFour.innerHTML = countryFourName;
     //Sexto país
     const tableCountryFive = document.getElementById('countryFive');
-    tableCountryFive.innerHTML = countryFive;
+    tableCountryFive.innerHTML = countryFiveName;
     //Sétimo país
     const tableCountrySix = document.getElementById('countrySix');
-    tableCountrySix.innerHTML = countrySix;
+    tableCountrySix.innerHTML = countrySixName;
     //Oitavo país
     const tableCountrySeven = document.getElementById('countrySeven');
-    tableCountrySeven.innerHTML = countrySeven;
+    tableCountrySeven.innerHTML = countrySevenName;
     //Nono país
     const tableCountryEight = document.getElementById('countryEight');
-    tableCountryEight.innerHTML = countryEight;
+    tableCountryEight.innerHTML = countryEightName;
     //Décimo país
     const tableCountryNine = document.getElementById('countryNine');
-    tableCountryNine.innerHTML = countryNine;
+    tableCountryNine.innerHTML = countryNineName;
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     //Segunda linha
     //Primeiro país
